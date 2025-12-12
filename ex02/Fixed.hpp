@@ -28,11 +28,11 @@ class Fixed {
 
       bool operator>(const Fixed& obj2) const;
       bool operator<(const Fixed& obj2) const;
-      bool operator>=(const Fixed& obj2) const;
       bool operator<=(const Fixed& obj2) const;
+      bool operator>=(const Fixed& obj2) const;
       bool operator==(const Fixed& obj2) const;
       bool operator!=(const Fixed& obj2) const;
-
+      
       //opérateurs arithmétiques
 
       Fixed operator+(const Fixed& obj2) const;

@@ -80,70 +80,70 @@ std::ostream& operator<<(std::ostream& cout, const Fixed& fixedToDisplay) {
     return cout;
 }
 
-bool Fixed::operator>(Fixed& obj2) const {
+bool Fixed::operator>(const Fixed& obj2) const {
 
     if (this->_value > obj2._value)
         return true;
     return false;
 }
 
-bool Fixed::operator<(Fixed& obj2) const {
+bool Fixed::operator<(const Fixed& obj2) const {
 
     if (this->_value < obj2._value)
         return true;
     return false;
 }
 
-bool Fixed::operator<=(Fixed& obj2) const {
+bool Fixed::operator<=(const Fixed& obj2) const {
 
     if (this->_value <= obj2._value)
         return true;
     return false;
 }
 
-bool Fixed::operator>=(Fixed& obj2) const {
+bool Fixed::operator>=(const Fixed& obj2) const {
 
     if (this->_value >= obj2._value)
         return true;
     return false;
 }
 
-bool Fixed::operator==(Fixed& obj2) const {
+bool Fixed::operator==(const Fixed& obj2) const {
 
     if (this->_value == obj2._value)
         return true;
     return false;
 }
 
-bool Fixed::operator!=(Fixed& obj2) const {
+bool Fixed::operator!=(const Fixed& obj2) const {
 
     if (this->_value != obj2._value)
         return true;
     return false;
 }
 
-Fixed Fixed::operator+(Fixed& obj2) const {
+Fixed Fixed::operator+(const Fixed& obj2) const {
 
     Fixed result;
     result.setRawBits(this->_value + obj2._value);
     return result;
 }
 
-Fixed Fixed::operator-(Fixed& obj2) const {
+Fixed Fixed::operator-(const Fixed& obj2) const {
 
     Fixed result;
     result.setRawBits(this->_value - obj2._value);
     return result;
 }
 
-Fixed Fixed::operator*(Fixed& obj2) const {
+Fixed Fixed::operator*(const Fixed& obj2) const {
 
     Fixed result;
     result.setRawBits((this->_value * obj2._value) >> _f_bits);
     return result;
 }
 
-Fixed Fixed::operator/(Fixed& obj2) const {
+Fixed Fixed::operator/(const Fixed& obj2) const {
 
     Fixed result;
     result.setRawBits((this->_value << _f_bits) / obj2._value);

@@ -26,19 +26,19 @@ class Fixed {
 
       //opérateurs de comparaison
 
-      bool operator>(Fixed& obj2) const;
-      bool operator<(Fixed& obj2) const;
-      bool operator>=(Fixed& obj2) const;
-      bool operator<=(Fixed& obj2) const;
-      bool operator==(Fixed& obj2) const;
-      bool operator!=(Fixed& obj2) const;
-
+      bool operator>(const Fixed& obj2) const;
+      bool operator<(const Fixed& obj2) const;
+      bool operator<=(const Fixed& obj2) const;
+      bool operator>=(const Fixed& obj2) const;
+      bool operator==(const Fixed& obj2) const;
+      bool operator!=(const Fixed& obj2) const;
+      
       //opérateurs arithmétiques
 
-      Fixed operator+(Fixed& obj2) const;
-      Fixed operator-(Fixed& obj2) const;
-      Fixed operator*(Fixed& obj2) const;
-      Fixed operator/(Fixed& obj2) const;
+      Fixed operator+(const Fixed& obj2) const;
+      Fixed operator-(const Fixed& obj2) const;
+      Fixed operator*(const Fixed& obj2) const;
+      Fixed operator/(const Fixed& obj2) const;
 
       //opérateurs d'incrémentation/décrémentation
 

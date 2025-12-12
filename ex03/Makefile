@@ -1,10 +1,10 @@
 # ================== CONFIGURATION ================== #
-NAME      := floatEx02
+NAME      := Triangle
 CC        := c++
 CFLAGS    := -Wall -Wextra -Werror -g -std=c++98
 OPTIONS   := -I includes
 
-SRC_FILES := main.cpp Fixed.cpp
+SRC_FILES := main.cpp Fixed.cpp Point.cpp
 OBJ_DIR   := obj
 
 SRC   := $(SRC_FILES)

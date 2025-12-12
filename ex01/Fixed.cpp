@@ -26,9 +26,7 @@ Fixed::Fixed(const int num) {
 
     int tmp_num;
     std::cout << "Int Constructor called" << std::endl;
-    std::cout << "DEBUG : " << num << std::endl;
     tmp_num = num << this->_f_bits;
-    std::cout << "DEBUG : " << tmp_num << std::endl;
     this->_value = tmp_num;
 }
 
