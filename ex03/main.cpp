@@ -17,7 +17,7 @@ int main()
     Point a(0.0, 0.0);
     Point b(10.0, 0.0);
     Point c(0.0, 10.0);
-    Point point(15.0, 5.0);
+    Point point(5.0, 4.0);
 
     bool res = bsp(a, b ,c, point);
     if (res == 1)

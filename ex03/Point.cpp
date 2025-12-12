@@ -6,7 +6,7 @@
 /*   By: armosnie <armosnie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/10 16:41:07 by armosnie          #+#    #+#             */
-/*   Updated: 2025/12/12 14:12:21 by armosnie         ###   ########.fr       */
+/*   Updated: 2025/12/12 14:36:57 by armosnie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,9 +51,12 @@ bool bsp(Point const a, Point const b, Point const c, Point const point) {
     float p2_triangle = calculate_area(c, point, a);
     float p3_triangle = calculate_area(point, a, b);
 
-    if (p1_triangle == 0 || p2_triangle == 0 || p3_triangle == 0)
+    float epsilone = 0.0001f;
+
+    if (p1_triangle < epsilone || p2_triangle < epsilone || p3_triangle < epsilone)
         return false;
-    else if ((p1_triangle + p2_triangle + p3_triangle) == triangle)
+    float sum = p1_triangle + p2_triangle + p3_triangle;
+    if (sum >= triangle - epsilone && sum <= triangle + epsilone)
         return true;
     return false;
 }
